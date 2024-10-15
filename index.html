@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>영화 검색</h1>
+        <input type="text" id="search" placeholder="영화를 검색하세요.">
+        <button type="button" id="showBookmark">북마크 보기</button>
+    </header>
+
+    <!-- <ul id="movie-list"></ul> -->
+
+    <section id="movie-list">
+        <div class="movieCard">
+            <img src="#" alt="">
+            <h3>영화제목</h3>
+            <P>평점 : </P>
+        </div>
+    </section>
+
+        <div id="Modal" class="Modal">
+            <div class="modalMain">
+                <span class="close">X</span>
+            <img src="#" alt="">
+            <h3 id="movieTitle">영화제목</h3>
+            <p id="movieContent">내용내용내용내용내용내용내용내용내용</p>
+            <p>
+                <strong>개봉일 : </strong>
+                <span>개봉날짜</span>
+            </p>
+            <p>
+                <strong>평점 : </strong>
+                <span>평점</span>
+            </p>
+            <button id="bookMarkbtn">북마크추가</button>
+            <button id="removebookMarkbtn">북마크삭제</button>
+            </div>
+        </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
