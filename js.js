@@ -68,3 +68,5 @@ document.querySelector('#search').addEventListener('keydown', (event) => {
 });
 
 getData();
+
+// 모달 구현
