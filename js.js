@@ -15,6 +15,7 @@ const options = {
     }
 };
 
+let movies=[];
 
 const getData = async() => {
     try {
@@ -42,5 +43,20 @@ const displayMovie = (movies) => {
         movieList.appendChild(movieCard);
     });
 };
+
+
+
+
+const searchFilter = () => {
+    const searchInput = document.querySelector("#search").value;
+    const filterMovie = (movies, searchInput);
+    displayMovie(filterMovie);
+};
+
+document.querySelector('#search').addEventListener('keydown', (event) => {
+    if (event.key === "Enter") {
+        searchFilter();
+    }
+});
 
 getData();
