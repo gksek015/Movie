@@ -21,7 +21,8 @@ const getData = async() => {
     try {
         const response = await fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc', options);
         const data = await response.json();
-        displayMovie(data.results);
+        movies=data.results;
+        displayMovie(movies);
     } catch (error) {
         console.log(`error : ${error}`);
     }
@@ -47,15 +48,22 @@ const displayMovie = (movies) => {
 
 
 
-const searchFilter = () => {
-    const searchInput = document.querySelector("#search").value;
-    const filterMovie = (movies, searchInput);
-    displayMovie(filterMovie);
+const searchFilter = (searchInput) => {
+    const filterMovies = movies.filter(movie => 
+        movie.title.toLowerCase().includes(searchInput.toLowerCase())
+    );
+    displayMovie(filterMovies);
 };
+
+document.querySelector('#search').addEventListener('input', (event) => {
+    const searchInput = event.target.value;
+    searchFilter(searchInput);
+})
 
 document.querySelector('#search').addEventListener('keydown', (event) => {
     if (event.key === "Enter") {
-        searchFilter();
+        const searchInput = event.target.value;
+        searchFilter(searchInput);
     }
 });
 
