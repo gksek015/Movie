@@ -40,6 +40,7 @@ button{
     width: 200px;
     text-align: center;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .movieCard > img {
