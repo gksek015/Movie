@@ -64,7 +64,11 @@ const openModal = (movie) => {
 
     modal.style.display = "block"};
 
-    
+const modalClose = document.querySelector(".close");
+
+modalClose.addEventListener("click", function () {
+    modal.style.display = "none";
+});
 
 const searchFilter = (searchInput) => {
     const filterMovies = movies.filter(movie => 
@@ -89,12 +93,9 @@ getData();
 
 // const modal = document.querySelector(".modal");
 // const modalOpen = document.querySelector(".movieCard");
-// const modalClose = document.querySelector(".close");
+
 
 // modalOpen.addEventListener("click", function () {
 //     modal.style.display = "block";
 // });
 
-// modalClose.addEventListener("click", function () {
-//     modal.style.display = "none";
-// });
