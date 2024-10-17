@@ -69,4 +69,5 @@ button{
     max-height: 70%;
     text-align: center;
     margin-top: 5px;
+    overflow: auto;
 }

@@ -21,7 +21,9 @@ const getData = async() => {
     try {
         const response = await fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc', options);
         const data = await response.json();
+
         movies=data.results;
+
         displayMovie(movies);
     } catch (error) {
         console.log(`error : ${error}`);
@@ -55,8 +57,9 @@ const openModal = (movie) => {
     modalMain.innerHTML = `
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
         <h3>${movie.title}</h3>
-                <p>${movie.overview}</p>`;
-        <p>평점: ${movie.vote_average}</p>
+        <p>${movie.overview}</p>
+        <p><strong>개봉일 : ${movie.release_date}</strong></p>
+        <p><strong>평점: ${movie.vote_average}</strong></p>`;
 
     modal.style.display = "block"};
 
