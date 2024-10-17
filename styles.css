@@ -46,3 +46,7 @@ button{
 .movieCard > img {
     width: 100%;
 }
+
+.modal {
+    position: fixed;
+}

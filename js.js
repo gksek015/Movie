@@ -29,7 +29,6 @@ const getData = async() => {
 };
 
 
-
 const displayMovie = (movies) => {
     const movieList = document.querySelector('#movie-list');
     movieList.innerHTML = '';
@@ -49,16 +48,17 @@ const displayMovie = (movies) => {
 const openModal = (movie) => {
     const modal = document.querySelector(".modal");
     document.querySelector("#movieTitle").textContent = movie.title;
-    document.querySelector("#movieContent").textContent = movie.overview || "내용이 없습니다.";
+    document.querySelector("#movieContent").textContent = movie.overview;
     document.querySelector(".modal img").src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-    document.querySelector(".modal span").textContent = movie.release_date;
-    document.querySelector(".modal p:nth-of-type(2) span").textContent = movie.vote_average;
+    document.querySelector("#modalDate").textContent = movie.release_date;
+    document.querySelector("#modalRating").textContent = movie.vote_average;
 
     modal.style.display = "block";
 };
 
 document.querySelector('.close').addEventListener('click', () => {
-    document.querySelector(".modal").style.display = "none";
+    const modal = document.querySelector(".modal");
+    modal.style.display = "none";
 });
 
 const searchFilter = (searchInput) => {
