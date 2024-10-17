@@ -40,12 +40,25 @@ const displayMovie = (movies) => {
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
             <h3>${movie.title}</h3>
             <p>평점: ${movie.vote_average}</p>`;
-            movieCard.addEventListener("click", () => openModal(movie));
+            movieCard.addEventListener("click", () => {
+                console.log("클릭됨");
+                openModal(movie);
+            });
         movieList.appendChild(movieCard);
     });
 };
 
+const openModal = (movie) => {
+    const modal = document.querySelector(".modal");
+    const modalMain = modal.querySelector(".modalMain")
 
+    modalMain.innerHTML = `
+        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+        <h3>${movie.title}</h3>
+                <p>${movie.overview}</p>`;
+        <p>평점: ${movie.vote_average}</p>
+
+    modal.style.display = "block"};
 
 const searchFilter = (searchInput) => {
     const filterMovies = movies.filter(movie => 
