@@ -41,12 +41,25 @@ const displayMovie = (movies) => {
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
             <h3>${movie.title}</h3>
             <p>평점: ${movie.vote_average}</p>`;
+        movieCard.addEventListener("click", ()=> openModal(movie));
         movieList.appendChild(movieCard);
     });
 };
 
+const openModal = (movie) => {
+    const modal = document.querySelector(".modal");
+    document.querySelector("#movieTitle").textContent = movie.title;
+    document.querySelector("#movieContent").textContent = movie.overview || "내용이 없습니다.";
+    document.querySelector(".modal img").src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+    document.querySelector(".modal span").textContent = movie.release_date;
+    document.querySelector(".modal p:nth-of-type(2) span").textContent = movie.vote_average;
 
+    modal.style.display = "block";
+};
 
+document.querySelector('.close').addEventListener('click', () => {
+    document.querySelector(".modal").style.display = "none";
+});
 
 const searchFilter = (searchInput) => {
     const filterMovies = movies.filter(movie => 
@@ -69,4 +82,14 @@ document.querySelector('#search').addEventListener('keydown', (event) => {
 
 getData();
 
-// 모달 구현
+// const modal = document.querySelector(".modal");
+// const modalOpen = document.querySelector(".movieCard");
+// const modalClose = document.querySelector(".close");
+
+// modalOpen.addEventListener("click", function () {
+//     modal.style.display = "block";
+// });
+
+// modalClose.addEventListener("click", function () {
+//     modal.style.display = "none";
+// });
