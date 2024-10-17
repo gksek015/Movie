@@ -55,6 +55,7 @@ const openModal = (movie) => {
     const modalMain = modal.querySelector(".modalMain")
 
     modalMain.innerHTML = `
+        <span class="close">X</span>
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
         <h3>${movie.title}</h3>
         <p>${movie.overview}</p>
@@ -62,6 +63,8 @@ const openModal = (movie) => {
         <p><strong>평점: ${movie.vote_average}</strong></p>`;
 
     modal.style.display = "block"};
+
+    
 
 const searchFilter = (searchInput) => {
     const filterMovies = movies.filter(movie => 
