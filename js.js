@@ -40,26 +40,12 @@ const displayMovie = (movies) => {
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
             <h3>${movie.title}</h3>
             <p>평점: ${movie.vote_average}</p>`;
-        movieCard.addEventListener("click", ()=> openModal(movie));
+            movieCard.addEventListener("click", () => openModal(movie));
         movieList.appendChild(movieCard);
     });
 };
 
-const openModal = (movie) => {
-    const modal = document.querySelector(".modal");
-    document.querySelector("#movieTitle").textContent = movie.title;
-    document.querySelector("#movieContent").textContent = movie.overview;
-    document.querySelector(".modal img").src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-    document.querySelector("#modalDate").textContent = movie.release_date;
-    document.querySelector("#modalRating").textContent = movie.vote_average;
 
-    modal.style.display = "block";
-};
-
-document.querySelector('.close').addEventListener('click', () => {
-    const modal = document.querySelector(".modal");
-    modal.style.display = "none";
-});
 
 const searchFilter = (searchInput) => {
     const filterMovies = movies.filter(movie => 

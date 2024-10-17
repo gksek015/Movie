@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>영화 검색</h1>
@@ -22,10 +24,10 @@
         </div>
     </section>
 
-        <div id="modal" class="modal" style="display: none">
-            <div class="modalMain">
-                <span class="close">X</span>
-            <img src="#" alt="">
+    <div id="modal" class="modal">
+        <div class="modalMain">
+            <span class="close">X</span>
+            <img id="modalImg" src="#" alt="">
             <h3 id="movieTitle">영화제목</h3>
             <p id="movieContent">내용내용내용내용내용내용내용내용내용</p>
             <p>
@@ -38,8 +40,8 @@
             </p>
             <button id="bookMarkbtn">북마크추가</button>
             <button id="removebookMarkbtn">북마크삭제</button>
-            </div>
         </div>
+    </div>
 
     <script src="js.js"></script>
 </body>
