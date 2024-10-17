@@ -62,13 +62,15 @@ const openModal = (movie) => {
         <p><strong>개봉일 : ${movie.release_date}</strong></p>
         <p><strong>평점: ${movie.vote_average}</strong></p>`;
 
-    modal.style.display = "block"};
+    modal.style.display = "block"
+    const modalClose = document.querySelector(".close");
 
-const modalClose = document.querySelector(".close");
+    modalClose.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+};
 
-modalClose.addEventListener("click", function () {
-    modal.style.display = "none";
-});
+
 
 const searchFilter = (searchInput) => {
     const filterMovies = movies.filter(movie => 
