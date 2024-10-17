@@ -84,12 +84,12 @@ document.querySelector('#search').addEventListener('input', (event) => {
     searchFilter(searchInput);
 })
 
-document.querySelector('#search').addEventListener('keydown', (event) => {
-    if (event.key === "Enter") {
-        const searchInput = event.target.value;
-        searchFilter(searchInput);
-    }
-});
+// document.querySelector('#search').addEventListener('keydown', (event) => {
+//     if (event.key === "Enter") {
+//         const searchInput = event.target.value;
+//         searchFilter(searchInput);
+//     }
+// });
 
 getData();
 
