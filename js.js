@@ -55,8 +55,15 @@ const displayMovie = (movies) => {
                 cardRating.style.display = "block"
             });
 
+            movieCard.addEventListener("mouseout", () => {
+                const cardImg = movieCard.querySelector("img");
+                const cardTitle = movieCard.querySelector(".cardTitle");
+                const cardRating = movieCard.querySelector(".cardRating");
 
-
+                cardImg.style.display = "block";
+                cardTitle.style.display = "none";
+                cardRating.style.display = "none"
+            })
             movieCard.addEventListener("click", () => {
                 openModal(movie);
             });
