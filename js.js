@@ -46,12 +46,14 @@ const displayMovie = (movies) => {
             <p>평점: ${movie.vote_average}</p>`;
 
             movieCard.addEventListener("mouseover", () => {
-                const cardTitle = movieCard.querySelector("#cardTitle");
-                const cardRating = movieCard.querySelector("#cardRating");
+                const cardImg = movieCard.querySelector("img");
+                const cardTitle = movieCard.querySelector(".cardTitle");
+                const cardRating = movieCard.querySelector(".cardRating");
 
+                cardImg.style.display = "none";
                 cardTitle.style.display = "block";
                 cardRating.style.display = "block"
-            })
+            });
 
 
 
