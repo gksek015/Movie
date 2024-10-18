@@ -93,11 +93,3 @@ document.querySelector('#search').addEventListener('input', (event) => {
 
 getData();
 
-// const modal = document.querySelector(".modal");
-// const modalOpen = document.querySelector(".movieCard");
-
-
-// modalOpen.addEventListener("click", function () {
-//     modal.style.display = "block";
-// });
-
