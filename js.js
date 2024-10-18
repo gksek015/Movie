@@ -44,6 +44,17 @@ const displayMovie = (movies) => {
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
             <h3>${movie.title}</h3>
             <p>평점: ${movie.vote_average}</p>`;
+
+            movieCard.addEventListener("mouseover", () => {
+                const cardTitle = movieCard.querySelector("#cardTitle");
+                const cardRating = movieCard.querySelector("#cardRating");
+
+                cardTitle.style.display = "block";
+                cardRating.style.display = "block"
+            })
+
+
+
             movieCard.addEventListener("click", () => {
                 openModal(movie);
             });
