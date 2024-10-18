@@ -66,15 +66,13 @@ const openModal = (movie) => {
         <p><strong>평점: ${movie.vote_average}</strong></p>`;
 
     modal.style.display = "block"
-    const modalClose = document.querySelector(".close");
 
+    const modalClose = document.querySelector(".close");
     modalClose.addEventListener("click", function () {
         modal.style.display = "none";
     });
 };
 
-
-// 북마크 
 
 
 
@@ -101,5 +99,3 @@ getData();
 //         searchFilter(searchInput);
 //     }
 // });
-
-dj
