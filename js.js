@@ -7,6 +7,7 @@
 //     .catch(err => console.error(err));
     
 
+// API 받아오기
 const options = {
     method: 'GET',
     headers: {
@@ -31,6 +32,7 @@ const getData = async() => {
 };
 
 
+// 카드 추가
 const displayMovie = (movies) => {
     const movieList = document.querySelector('#movie-list');
     movieList.innerHTML = '';
@@ -49,6 +51,8 @@ const displayMovie = (movies) => {
     });
 };
 
+
+// 모달창 열고 닫기
 const openModal = (movie) => {
     const modal = document.querySelector(".modal");
     const modalMain = modal.querySelector(".modalMain")
@@ -70,7 +74,7 @@ const openModal = (movie) => {
 };
 
 
-
+// 영화 검색 필터
 const searchFilter = (searchInput) => {
     const filterMovies = movies.filter(movie => 
         movie.title.toLowerCase().includes(searchInput.toLowerCase())
@@ -83,12 +87,13 @@ document.querySelector('#search').addEventListener('input', (event) => {
     searchFilter(searchInput);
 })
 
+getData();
+
+
+//엔터로 검색 넣을까 말까
 // document.querySelector('#search').addEventListener('keydown', (event) => {
 //     if (event.key === "Enter") {
 //         const searchInput = event.target.value;
 //         searchFilter(searchInput);
 //     }
 // });
-
-getData();
-
