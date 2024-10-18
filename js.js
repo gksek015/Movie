@@ -43,7 +43,6 @@ const displayMovie = (movies) => {
             <h3>${movie.title}</h3>
             <p>평점: ${movie.vote_average}</p>`;
             movieCard.addEventListener("click", () => {
-                console.log("클릭됨");
                 openModal(movie);
             });
         movieList.appendChild(movieCard);
