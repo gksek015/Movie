@@ -1,8 +1,11 @@
+html, body {margin: 0; padding: 0;}
+
+
 header{
     background-color: black;
-    padding: 20px;
-    text-align: center;
     color: white;
+    padding: 10px;
+    text-align: center;
 }
 
 #search{

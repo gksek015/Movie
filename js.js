@@ -74,6 +74,10 @@ const openModal = (movie) => {
 };
 
 
+// 북마크 
+
+
+
 // 영화 검색 필터
 const searchFilter = (searchInput) => {
     const filterMovies = movies.filter(movie => 
@@ -97,3 +101,5 @@ getData();
 //         searchFilter(searchInput);
 //     }
 // });
+
+dj
