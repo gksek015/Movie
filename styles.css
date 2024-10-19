@@ -37,7 +37,9 @@ button{
 }
 
 .movieCard {
-    background-color: white;
+    position: relative;
+    background-color: transparent;
+    color: white;
     border-radius: 10px;
     margin: 10px;
     margin-bottom: 20px;
@@ -48,9 +50,10 @@ button{
     display: flex;
 }
 
-.movieCard > img {
-    width: 100%;
-}
+
+
+.movieCard > img {width: 100%;}
+
 
 .modal {
     display: none;

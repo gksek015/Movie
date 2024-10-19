@@ -45,6 +45,9 @@ const displayMovie = (movies) => {
             <h3>${movie.title}</h3>
             <p>평점: ${movie.vote_average}</p>`;
 
+
+// 카드 이벤트
+            // 카드 이벤트
             movieCard.addEventListener("mouseover", () => {
                 const cardImg = movieCard.querySelector("img");
                 const cardTitle = movieCard.querySelector(".cardTitle");
@@ -70,7 +73,6 @@ const displayMovie = (movies) => {
         movieList.appendChild(movieCard);
     });
 };
-
 
 // 모달창 열고 닫기
 const openModal = (movie) => {
