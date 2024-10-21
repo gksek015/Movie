@@ -60,7 +60,7 @@ const openModal = (movie) => {
     const modalMain = modal.querySelector(".modalMain")
 
     modalMain.innerHTML = `
-        <span class="close">X</span>
+        <span class="close">x</span>
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
         <h3>${movie.title}</h3>
         <p>${movie.overview}</p>
@@ -69,6 +69,7 @@ const openModal = (movie) => {
 
     modal.style.display = "block"
 
+    // x클릭하면 닫기
     const modalClose = document.querySelector(".close");
     modalClose.addEventListener("click", function () {
         modal.style.display = "none";
@@ -84,12 +85,13 @@ const openModal = (movie) => {
 
 
 
-
 // 영화 검색 필터
 const searchFilter = (searchInput) => {
-    const filterMovies = movies.filter(movie => 
-        movie.title.toLowerCase().includes(searchInput.toLowerCase())
-    );
+    const filterMovies = movies.filter(movie => {
+        const title = movie.title.toLowerCase();
+        const search = searchInput.toLowerCase();
+        return title.indexOf(search) === 0;
+    });
     displayMovie(filterMovies);
 };
 
@@ -100,11 +102,4 @@ document.querySelector('#search').addEventListener('input', (event) => {
 
 getData();
 
-
-//엔터로 검색 넣을까 말까
-// document.querySelector('#search').addEventListener('keydown', (event) => {
-//     if (event.key === "Enter") {
-//         const searchInput = event.target.value;
-//         searchFilter(searchInput);
-//     }
-// });
+// movie.title.toLowerCase().includes(searchInput.toLowerCase())
