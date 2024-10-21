@@ -50,6 +50,7 @@ const displayMovie = (movies) => {
             movieCard.addEventListener("click", () => {
                 openModal(movie);
             });
+            
         movieList.appendChild(movieCard);
     });
 };

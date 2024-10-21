@@ -63,7 +63,7 @@ button{
     width: 100%;
     background-color: rgba(0,0,0,0.7);
     color: white;
-    text-align: left;
+    text-align: center;
 }
 
 .movieCard:hover .cardIn {opacity: 1; visibility: visible;}
