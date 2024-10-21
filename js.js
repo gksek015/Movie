@@ -42,31 +42,11 @@ const displayMovie = (movies) => {
         movieCard.classList.add('movieCard');
         movieCard.innerHTML = `
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+        <div class="cardIn">
             <h3>${movie.title}</h3>
-            <p>평점: ${movie.vote_average}</p>`;
+            <p>평점: ${movie.vote_average}</p>
+        </div>`;
 
-
-// 카드 이벤트
-            // 카드 이벤트
-            // movieCard.addEventListener("mouseover", () => {
-            //     const cardImg = movieCard.querySelector("img");
-            //     const cardTitle = movieCard.querySelector(".cardTitle");
-            //     const cardRating = movieCard.querySelector(".cardRating");
-
-            //     cardImg.style.display = "none";
-            //     cardTitle.style.display = "block";
-            //     cardRating.style.display = "block"
-            // });
-
-            // movieCard.addEventListener("mouseout", () => {
-            //     const cardImg = movieCard.querySelector("img");
-            //     const cardTitle = movieCard.querySelector(".cardTitle");
-            //     const cardRating = movieCard.querySelector(".cardRating");
-
-            //     cardImg.style.display = "block";
-            //     cardTitle.style.display = "none";
-            //     cardRating.style.display = "none"
-            // })
             movieCard.addEventListener("click", () => {
                 openModal(movie);
             });

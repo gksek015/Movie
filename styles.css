@@ -52,10 +52,19 @@ button{
     display: flex;
 }
 
-.movieCard :hover {
+.movieCard .cardIn {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: rgba(0,0,0,0.5);
-    opacity: 0.7;
+    color: white;
+    text-align: left;
 }
+
+.movieCard:hover .cardIn {opacity: 1; visibility: visible;}
 
 
 .movieCard > img {width: 100%;}
@@ -105,6 +114,3 @@ button{
     cursor: pointer;
 }
 
-#cardTitle, #cardRating {
-    display: none;
-}
