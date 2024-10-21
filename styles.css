@@ -52,6 +52,8 @@ button{
     display: flex;
 }
 
+.movieCard:hover {opacity: 0.7;}
+
 .movieCard .cardIn {
     opacity: 0;
     visibility: hidden;
@@ -59,7 +61,7 @@ button{
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     color: white;
     text-align: left;
 }

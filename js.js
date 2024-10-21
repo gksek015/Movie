@@ -44,7 +44,7 @@ const displayMovie = (movies) => {
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
         <div class="cardIn">
             <h3>${movie.title}</h3>
-            <p>평점: ${movie.vote_average}</p>
+            <p>평점  ${movie.vote_average}</p>
         </div>`;
 
             movieCard.addEventListener("click", () => {
@@ -73,6 +73,13 @@ const openModal = (movie) => {
     modalClose.addEventListener("click", function () {
         modal.style.display = "none";
     });
+
+    // 외부 클릭하면 닫기
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    })
 };
 
 
