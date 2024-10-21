@@ -101,9 +101,7 @@ button{
 
 .modalMain > img {border-radius: 10px;}
 
-#movieTitle {
-    font-size: 24px;
-}
+#movieTitle {font-size: 24px;}
 
 .close {
     position: absolute;
