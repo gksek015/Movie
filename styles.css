@@ -7,6 +7,8 @@ header{
     text-align: center;
 }
 
+input {color: white;}
+
 #search{
     margin-top: 10px; 
     padding: 10px; 
@@ -50,6 +52,10 @@ button{
     display: flex;
 }
 
+.movieCard :hover {
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0.7;
+}
 
 
 .movieCard > img {width: 100%;}

@@ -48,25 +48,25 @@ const displayMovie = (movies) => {
 
 // 카드 이벤트
             // 카드 이벤트
-            movieCard.addEventListener("mouseover", () => {
-                const cardImg = movieCard.querySelector("img");
-                const cardTitle = movieCard.querySelector(".cardTitle");
-                const cardRating = movieCard.querySelector(".cardRating");
+            // movieCard.addEventListener("mouseover", () => {
+            //     const cardImg = movieCard.querySelector("img");
+            //     const cardTitle = movieCard.querySelector(".cardTitle");
+            //     const cardRating = movieCard.querySelector(".cardRating");
 
-                cardImg.style.display = "none";
-                cardTitle.style.display = "block";
-                cardRating.style.display = "block"
-            });
+            //     cardImg.style.display = "none";
+            //     cardTitle.style.display = "block";
+            //     cardRating.style.display = "block"
+            // });
 
-            movieCard.addEventListener("mouseout", () => {
-                const cardImg = movieCard.querySelector("img");
-                const cardTitle = movieCard.querySelector(".cardTitle");
-                const cardRating = movieCard.querySelector(".cardRating");
+            // movieCard.addEventListener("mouseout", () => {
+            //     const cardImg = movieCard.querySelector("img");
+            //     const cardTitle = movieCard.querySelector(".cardTitle");
+            //     const cardRating = movieCard.querySelector(".cardRating");
 
-                cardImg.style.display = "block";
-                cardTitle.style.display = "none";
-                cardRating.style.display = "none"
-            })
+            //     cardImg.style.display = "block";
+            //     cardTitle.style.display = "none";
+            //     cardRating.style.display = "none"
+            // })
             movieCard.addEventListener("click", () => {
                 openModal(movie);
             });
