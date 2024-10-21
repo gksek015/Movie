@@ -50,7 +50,7 @@ const displayMovie = (movies) => {
             movieCard.addEventListener("click", () => {
                 openModal(movie);
             });
-            
+
         movieList.appendChild(movieCard);
     });
 };
@@ -103,4 +103,3 @@ document.querySelector('#search').addEventListener('input', (event) => {
 
 getData();
 
-// movie.title.toLowerCase().includes(searchInput.toLowerCase())
