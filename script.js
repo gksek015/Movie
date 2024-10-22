@@ -1,5 +1,5 @@
 import { getMovies } from "./Api.js";
-import { displayMovie, searchFilter } from "./ui.js";
+import { displayMovie, searchFilter} from "./ui.js";
 
 let movies = [];
 
